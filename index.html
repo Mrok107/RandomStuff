@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test of Website 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Test of Website 2.0</h1>
+        <p>Plans: possibly stupid games, cozy, and uhhhh, fun buttons?</p>
+        <nav>
+            <a href="#button-room">Button Room</a>
+            <a href="#games">Stupid Games</a>
+            <a href="#stupid-stuff">Stupid Stuff</a>
+            <a href="#cozy-corner">Cozy Corner</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h2>Welcome in</h2>
+            <p>Grab a blanket. Press things.</p>
+            <button id="press-me">Press me</button>
+        </section>
+
+        <section id="button-room">
+            <h2>Button Room</h2>
+            <button id="confetti-btn">Confetti</button>
+            <button id="fact-btn">Random fun fact</button>
+            <button id="color-btn">Change color</button>
+            <button id="runaway-btn">Catch me</button>
+            <p id="fact-output"></p>
+        </section>
+
+        <section id="games">
+            <h2>Stupid Games</h2>
+
+            <article id="click-counter">
+                <h3>Click Counter</h3>
+                <p>Clicks: <span id="click-count">0</span></p>
+                <button id="click-btn">Click</button>
+            </article>
+
+            <article id="dont-click">
+                <h3>Don't Click the Button</h3>
+                <button id="dont-click-btn">Don't click me</button>
+                <p id="dont-click-output"></p>
+            </article>
+
+            <article id="reaction-test">
+                <h3>Reaction Test</h3>
+                <button id="reaction-btn">Start</button>
+                <p id="reaction-output"></p>
+            </article>
+
+            <article id="upgrade-clicker">
+                <h3>Useless Upgrades</h3>
+                <p>Points: <span id="points">0</span></p>
+                <button id="earn-btn">Earn a point</button>
+                <button id="upgrade-btn">Buy a tiny hat for your cursor (10 pts)</button>
+                <p id="upgrade-output"></p>
+            </article>
+
+            <article id="guess-number">
+                <h3>Guess My Number (1 to 10)</h3>
+                <input type="number" id="guess-input" min="1" max="10" placeholder="Your guess">
+                <button id="guess-btn">Guess</button>
+                <p id="guess-output"></p>
+            </article>
+
+            <article id="rps-rock">
+                <h3>Rock Paper Scissors vs. a Rock</h3>
+                <button id="rps-rock-btn">Rock</button>
+                <button id="rps-paper-btn">Paper</button>
+                <button id="rps-scissors-btn">Scissors</button>
+                <p id="rps-output">The rock always plays rock.</p>
+            </article>
+
+            <article id="hold-button">
+                <h3>Hold the Button</h3>
+                <button id="hold-btn">Hold me as long as you can</button>
+                <p>Longest hold: <span id="hold-time">0.0</span> seconds</p>
+            </article>
+
+            <article id="catch-dot">
+                <h3>Catch the Dot</h3>
+                <p>Caught: <span id="dot-count">0</span></p>
+                <div id="dot-area">
+                    <button id="dot-btn" aria-label="The dot">•</button>
+                </div>
+            </article>
+
+            <article id="pet-rock">
+                <h3>Pet Rock</h3>
+                <p id="rock-face">( o_o )</p>
+                <button id="pet-btn">Pet the rock</button>
+                <button id="feed-btn">Feed the rock</button>
+                <p id="rock-output">The rock has no opinion.</p>
+            </article>
+
+            <article id="loading-bar">
+                <h3>Fake Loading Bar</h3>
+                <button id="load-btn">Load nothing</button>
+                <progress id="load-progress" value="0" max="100"></progress>
+                <p id="load-output"></p>
+            </article>
+        </section>
+
+        <section id="stupid-stuff">
+            <h2>Stupid Stuff</h2>
+
+            <article id="magic-8">
+                <h3>Magic 8-Ball (Unreliable Edition)</h3>
+                <input type="text" id="8ball-input" placeholder="Ask a question">
+                <button id="8ball-btn">Shake</button>
+                <p id="8ball-output"></p>
+            </article>
+
+            <article id="wheel">
+                <h3>Wheel of Bad Decisions</h3>
+                <button id="wheel-btn">Spin</button>
+                <p id="wheel-output"></p>
+            </article>
+
+            <article id="dice-coin">
+                <h3>Dice and Coin</h3>
+                <button id="dice-btn">Roll a die</button>
+                <button id="coin-btn">Flip a coin</button>
+                <p id="dice-coin-output"></p>
+            </article>
+
+            <article id="compliment">
+                <h3>Compliment Machine</h3>
+                <button id="compliment-btn">Compliment me</button>
+                <p id="compliment-output"></p>
+            </article>
+
+            <article id="excuse">
+                <h3>Excuse Generator</h3>
+                <button id="excuse-btn">I'm late because...</button>
+                <p id="excuse-output"></p>
+            </article>
+
+            <article id="complaint-box">
+                <h3>Complaint Box (goes nowhere)</h3>
+                <textarea id="complaint-input" rows="3" placeholder="Type your complaint"></textarea>
+                <button id="complaint-btn">Send to the void</button>
+                <p id="complaint-output"></p>
+            </article>
+
+            <article id="do-nothing">
+                <h3>The Button That Does Nothing</h3>
+                <button id="nothing-btn">Press</button>
+                <p>Times nothing happened: <span id="nothing-count">0</span></p>
+            </article>
+
+            <article id="vibe-meter">
+                <h3>Vibe Meter</h3>
+                <button id="vibe-btn">Check my vibe</button>
+                <meter id="vibe-level" min="0" max="100" value="50"></meter>
+                <p id="vibe-output"></p>
+            </article>
+        </section>
+
+        <section id="cozy-corner">
+            <h2>Cozy Corner</h2>
+            <button id="theme-btn">Day / Night</button>
+            <button id="rain-btn">Rain sounds</button>
+            <blockquote id="comfort-quote">A little quote goes here.</blockquote>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with questionable decisions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
